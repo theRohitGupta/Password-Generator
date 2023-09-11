@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(270deg, #03001e 0%, #7303c0 50%, #7303c0 75%, #03001e 100%);
+    display: grid;
+    place-items: center;
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+.titleText{
+    color: white;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-align: center;
+}
+.generatedPasswordContent{
+    background-color: #160628;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #BC15F4;
+    position: relative;
+}
+.generatedPasswordContent input{
+    background: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 1.15rem 1rem;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+}
+input::placeholder{
+    color: yellow;
+    opacity: 0.5;
+}
+.generatedPasswordContent button{
+    background-color: #160628;
+    border: 0;
+    position: absolute;
+    right: 5%;
+}
+.copyIcon{
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: transparent;
+    color: #00DDC7;
+    cursor: pointer;
+}
+.copy-text{
+    position: absolute;
+    background-color: #BC15F4;
+    color: yellow;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.passwordCreatorContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #160628;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #BC15F4;
+}
+.sliderTextContainer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.passLenDisplay{
+    color: yellow;
+}
+.passLenSlider{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    appearance: none;
+    height: 0.75rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: #341F54;
+    background-image: linear-gradient(#BC15F4,#BC15F4);
+    background-repeat: no-repeat;
+}
+.passLenSlider::-webkit-slider-thumb{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+.passLenSlider::-moz-range-thumb{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+.passLenSlider:focus{
+    outline: 3px solid yellow;
+}
+.passLenSlider::-webkit-slider-thumb:hover{
+    background-color: black;
+    backface-visibility: hidden;
+    outline: 2px solid yellow;
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.50);
+    z-index: 1;
+}
+.passLenSlider::-moz-range-thumb:hover{
+    background-color: black;
+    backface-visibility: hidden;
+    outline: 2px solid yellow;
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.50);
+    z-index: 1;
+}
+.box{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+}
+.box input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00DDC7;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.box input:checked{
+    background-color: #00DDC7;
+}
+.box input:checked::before{
+    content:'✔';
+    position: absolute;
+    color: #160628;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 20%;
+    top: -3px;
+}
+.box label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    font-weight: 400;
+}
+#strengthIndication{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strengthText{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+.strengthIndicatorIcon{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    background-color: rgb(204, 204, 204);
+    box-shadow: rgb(204, 204, 204) 0px 0px 12px 1px;
+    display: block;
+}
+#generatePasswordBtn{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #BC15F4;
+    text-align: center;
+    border-radius: 0.75rem;
+    border: 0;
+    border-bottom: 0.35rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.redirectDiv{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+}
+.redirectDiv:hover{
+    transform: scale(1.1);
+}
+.redirect{
+    all: unset;
+    position: relative;
+}
+.tooltip{
+    background-color: rgba(255, 255, 30, 0.712);
+    padding: 0.5rem;
+    position: absolute;
+    top: -5rem;
+    display: none;
+    right: 2px;
+    font-size: 0.75rem;
+}
+.redirect:hover > .tooltip{
+    transition: all 300ms ease-in-out;
+    display: block;
+}

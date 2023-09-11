@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="password_176506.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1 class="titleText">Password Generator</h1>
+            <div class="generatedPasswordContent">
+                <input readonly placeholder="PASSWORD" randomGeneratedPassword>
+                <button copyButton >
+                    <span copyPassword class="copy-text"></span>
+                    <i class="fa-regular fa-copy copyIcon"></i>
+                </button>
+            </div>
+            <div class="passwordCreatorContainer">
+                <div class="sliderTextContainer">
+                    <span>Password Length</span>
+                    <span class="passLenDisplay" passwordLengthDisplay>0</span>
+                </div>
+                <div class="passwordLengthSlider">
+                    <input type="range" class="passLenSlider" passLenSlider min="1" max="20" value="8" step="1">
+                </div>
+                <div class="passwordConstraintsBox">
+                    <div class="box">
+                        <input type="checkbox" name="checkbox1" id="uppercase" checked>
+                        <label for="checkbox1">Include Uppercase Letters</label>
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" name="checkbox2" id="lowercase">
+                        <label for="checkbox2">Include Lowercase Letters</label>
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" name="checkbox3" id="numbers">
+                        <label for="checkbox3">Include Numbers</label>
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" name="checkbox4" id="symbols">
+                        <label for="checkbox4">Include Symbols</label>
+                    </div>
+                </div>
+                <div id="strengthIndication">
+                    <h3 class="strengthText">Strength</h3>
+                    <div id="strengthIcon" class="strengthIndicatorIcon"></div>
+                </div>
+                <div>
+                    <button id="generatePasswordBtn">Generate Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="redirectDiv">
+        <button class="redirect">
+          <p class="tooltip">Click On Me I'll Redirect You to Homepage</p>
+          <a href="https://therohitgupta.github.io/Rohit-Gupta/" target="_blank"><img src="hacker.png" alt="" width="50px" height="50px"></a>
+        </button>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/07f8f9c90c.js" crossorigin="anonymous"></script>
+</body>
+</html>
